@@ -1,4 +1,4 @@
-def call(String credId, String image, String ImageTag){
+def call(String credId, String image, Integer ImageTag){
   withCredentials([usernamePassword(
                     credentialsId: "${credId}",
                     usernameVariable: "DOCKER_USER",
