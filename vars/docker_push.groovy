@@ -7,7 +7,7 @@ def call(String credId, String imageName, Integer ImageTag){
 
                     sh """
                     echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-                    docker push $(env.DOCKER_USER)/${imageName}:${ImageTag}
+                    docker push ${env.DOCKER_USER}/${imageName}:${ImageTag}
                     """
                 }
 }
